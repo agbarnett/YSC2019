@@ -8,12 +8,16 @@ library(stringr) # for str_detect
 library(tidyr) # for switch from long to wide format
 library(lme4) # for regression model
 library(ggplot2) # for plots
+library(readr) # for reading the compressed data
 
 #### Section 0: data management ####
 
-# import the data
-data = read.csv('data/sa4datafilled.csv', stringsAsFactors = FALSE) %>%
-  mutate(statenum = 0)
+## import the data
+# a) from big raw file (too big for github)
+#data = read.csv('data/sa4datafilled.csv', stringsAsFactors = FALSE) %>%
+#  mutate(statenum = 0)
+# b) from RDS file (saved on github)
+data = read_rds('sa4datafilled.rds')
 
 ## data management
 # a) add state by finding last case of "No usual address"
