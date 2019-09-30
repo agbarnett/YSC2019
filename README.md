@@ -8,4 +8,6 @@ The code reads in the data and fits:
 
 The data came from Table Builder at the Australian Bureau of Statistics.
 
+The CSV file `sa4datafilled.csv` was too big to upload, so I used a compressed version `sa4datafilled.rds` in the R code. 
+
 Thanks to James Brown for the data and SAS code.
